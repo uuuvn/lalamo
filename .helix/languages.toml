@@ -1,0 +1,21 @@
+[[language]]
+name = "python"
+language-servers = [
+  "ruff",
+  "basedpyright"
+]
+
+[language.indent]
+tab-width = 4
+unit = "    "
+
+[language-server.basedpyright]
+command = "basedpyright-langserver"
+args = ["--stdio"]
+
+[language-server.basedpyright.config.settings.basedpyright.analysis]
+typeCheckingMode = "standard"
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
